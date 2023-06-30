@@ -1,0 +1,223 @@
+body{
+    background-color: aqua;
+
+}
+#container{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height:100vh;
+}
+h1{
+    font-size: 40px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+#hands{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-around;
+}
+.hand{
+    width:200px;
+    height:200px;
+}
+
+#buttons{
+    background-color: transparent;
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+}
+#scissor{
+    border:none;
+    padding:0;
+    background-color: white;
+    margin:30px;
+}
+#paper{
+    border:none;
+    padding:0;
+    background-color: white;
+    margin:30px;
+}
+#rock{
+    border:none;
+    padding:0;
+    background-color: white;
+    margin:30px;
+}
+
+#butttons img{
+    margin:0;
+}
+#computer{
+    animation: shake2 0.7s infinite;
+    animation-play-state: paused;
+}
+@keyframes shake2 {
+    50%{
+        transform: rotate(20deg);
+    }
+    100%{
+        transform: rotate(-20deg);
+    }
+}
+
+#player{
+    transform:rotate(180deg);
+    animation: shake 0.7s infinite;
+    animation-play-state: paused;
+}
+@keyframes shake {
+    50%{
+        transform: rotate(160deg);
+    }
+    100%{
+        transform: rotate(200deg);
+    }
+}
+
+#resultwin{
+    color:white;
+    display:none;
+    background-color: rgba(60, 58, 56,0.8);
+    backdrop-filter: blur(3px);
+    position: absolute;
+    left:50%;
+    top:50%;
+    width:100%;
+    height:100vh;
+    transform: translate(-50%,-50%);
+}
+#resultdraw{
+    color:white;
+    display:none;
+    background-color: rgba(60, 58, 56,0.8);
+    /* backdrop-filter: opacity(0.2px); */
+    backdrop-filter: blur(3px);
+    position: absolute;
+    left:50%;
+    top:50%;
+    width:100%;
+    height:100vh;
+    transform: translate(-50%,-50%);
+}
+#resultloose{
+    color:white;
+    display:none;
+    background-color: rgba(60, 58, 56,0.8);
+    backdrop-filter: blur(3px);
+    position: absolute;
+    left:50%;
+    top:50%;
+    width:100%;
+    height:100vh;
+    transform: translate(-50%,-50%);
+}
+#resultdraw h1{
+    font-size:90px;
+    display:block;
+    position:absolute;
+    top:40%;
+    left:50%;
+    /* border:1px solid white; */
+    transform: translate(-50%,-50%);
+}
+#resultwin h1{
+    font-size:90px;
+    display:block;
+    position:absolute;
+    top:40%;
+    left:50%;
+    /* border:1px solid white; */
+    transform: translate(-50%,-50%);
+}
+#resultloose h1{
+    font-size:90px;
+    display:block;
+    position:absolute;
+    top:40%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.drawbutton{
+    background-color: rgb(54, 149, 204);
+}
+.winbutton {
+    background-color: rgb(51, 231, 42);
+}
+.loosebutton{
+    background-color: rgb(251, 66, 66);
+}
+#finalresult{
+    color:white;
+    display:none;
+    background-color: rgba(60, 58, 56,0.8);
+    backdrop-filter: blur(3px);
+    position: absolute;
+    left:50%;
+    top:50%;
+    width:100%;
+    height:100vh;
+    transform: translate(-50%,-50%);
+}
+.finalbutton{
+    background-color: rgb(42, 159, 231);
+    border:none;
+    position: absolute;
+    top:70%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    border-radius:10%;
+}
+#finalresult h1{
+    font-size:90px;
+    display:block;
+    position:absolute;
+    top:40%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.resultbutton{
+    width:400px;
+    font-size:40px;
+    position: absolute;
+    top:70%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    border:none;
+}
+
+@media(max-width:750px) and (min-width:500px){
+    #computer{
+        width:150px;
+        height:150px;
+    }
+    #player{
+        width:150px;
+        height:150px;
+    }
+    .resultbutton{
+        width:250px;
+        font-size:30px;
+    }
+}
+@media(max-width:499px){
+    #computer{
+        width:100px;
+        height:100px;
+    }
+    #player{
+        width:100px;
+        height:100px;
+    }
+    .resultbutton{
+        width:200px;
+        font-size:25px;
+    }
+    #heading{
+        font-size:40px;
+    }
+}

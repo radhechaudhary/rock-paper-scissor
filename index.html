@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper, Scissor</title>
+    <link rel="stylesheet" href="style.css"/>
+    
+</head>
+<body>
+    <div id="container">
+        <h1 id="heading">Rock, Paper, Scissor</h1>
+        <div id="hands">
+            <img id="computer" class="hand" src="rock1.png" >
+            <img id="player" class="hand" src="rock1.png" >
+        </div>
+        <div id="buttons">
+            <button id="rock" onclick="rock()"><img src="rock.jpg" width="63", height="91"></button>
+            <button id="paper" onclick="paper()"><img src="paper.jpg" width="63", height="91"></button>
+            <button id="scissor" onclick="scissor()"><img src="scissor.jpg" width="63", height="91"></button>
+        </div>
+    </div>
+    <div id='resultdraw'>
+        <h1>Draw</h1>
+        <button onclick="result_continue(this)" class="resultbutton drawbutton">continue</button>
+    </div>
+    <div id='resultwin'><h1>win</h1><button class="resultbutton winbutton" onclick="result_continue(this)">continue</button></div>
+    <div id='resultloose'><h1>loose</h1><button class="resultbutton loosebutton" onclick="result_continue(this)">continue</button></div>
+    <div id="finalresult"><h1></h1><button id="reset" class="resultbutton finalbutton" onclick="reset()">Re-Play</button> </div>
+    <script src="script.js"></script>
+</body>
+</html>
